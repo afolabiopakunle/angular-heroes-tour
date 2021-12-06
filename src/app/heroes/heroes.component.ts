@@ -12,12 +12,8 @@ import {Observable} from "rxjs";
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = HEROES;
-  selectedHero?: Hero;
-  constructor(private heroService: HeroService) { }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
     this.getHeroes();
